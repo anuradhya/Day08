@@ -20,6 +20,15 @@ export default function Login(){
         }))
     }
 
+    const handlelogin =(e)=>{
+        e.preventDefault();
+
+        const user=Studentdata.find(
+            (user)=>
+                user.name===Credential.username &&
+            user.password===Credential.password
+        );
+    }
 
     return(
         <>
