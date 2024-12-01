@@ -28,8 +28,18 @@ export default function Login(){
                 user.name===Credential.username &&
             user.password===Credential.password
         );
-    }
 
+    if(user){
+        console.log("Login Successful");
+        setCredentials({username:"",password:"",error:""});
+        navigate("/dashboard");
+    }else{
+        setCredentials((prev)=>({
+            ...prev,
+            error:"Please check your username and password",
+        }))
+    }
+}
     return(
         <>
         </>
