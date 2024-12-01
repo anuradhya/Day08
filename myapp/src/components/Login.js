@@ -42,6 +42,30 @@ export default function Login(){
 }
     return(
         <>
+        <div>
+            <div>
+                <ul>
+                    <li>
+                        <Link to="/aboutus">About Us</Link>
+                    </li>
+                    <li>
+                        <Link to="/contactus">Contact Us</Link>
+                    </li>
+                    <li>
+                        <Link to="/home">Home</Link>
+                    </li>
+l                </ul>
+            </div>
+            <div>
+                <p>{Credential.error}</p>
+                <h3>Name:</h3>
+                <input type="text" name="username" onChange={handlechange}/>
+                <h3>Password:</h3>
+                <input type="password" name="password" onChange={handlechange}/>
+                <br></br>
+                <button onClick={handlelogin}>Login</button>
+            </div>
+        </div>
         </>
     )
 }
